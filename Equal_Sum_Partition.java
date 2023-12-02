@@ -10,17 +10,17 @@ public class Equal_Sum_Partition {
         for(int i=1;i<=n;i++){
             for(int j=1;j<=tar;j++){
                 int cur=arr[i-1];
-                if(cur<=j && dp[i-1][j-cur]==true){
-                    dp[i][j]=true;
+                if(cur<=j ){
+                    dp[i][j]=dp[i-1][j-cur]|| dp[i-1][j];
                 }
-                else if(cur<=j && dp[i-1][j]==true){
-                    dp[i][j]=true;
+                else{
+                    dp[i][j]=dp[i-1][j];
                 }
             }
         }
         return dp[n][tar];
     }
-    public static boolean equalPartition(int arr[]){
+    public static boolean canPartition(int arr[]){
         int sum=0;
         for(int i:arr){
             sum+=i;
@@ -32,7 +32,7 @@ public class Equal_Sum_Partition {
     }
     public static void main(String[] args) {
         int num[]={1,2,3,5};
-        boolean ans=equalPartition(num);
+        boolean ans=canPartition(num);
         System.out.println(ans);
     }
 }
