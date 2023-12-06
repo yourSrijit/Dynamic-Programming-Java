@@ -1,4 +1,4 @@
-package Dynamic_Programming;
+package Dynamic_Programming.UnboundedKnapsack;
 
 public class Rod_Cutting {
     public static int roadCutting(int length[], int price[], int totalRoad) {
