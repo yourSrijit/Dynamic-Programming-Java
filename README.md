@@ -1,1 +1,1 @@
-# Dynamic-Programming-JAVA
+# Dynamic-Programming-Java
